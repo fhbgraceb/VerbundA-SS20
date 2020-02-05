@@ -11,13 +11,13 @@ https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538
 You can choose between Eclipse, IntelliJ IDEA or Visual Studio(include at azure)
 Pro and Cons: https://stackshare.io/stackups/eclipse-vs-intellij-idea-vs-visual-studio
 
-##### Eclipse
+##### a) Eclipse
 https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-12/R/eclipse-inst-win64.exe
 
-##### IntelliJ IDEA
+##### b) IntelliJ IDEA
 https://www.jetbrains.com/idea/download/#section=windows
 
-##### Visual Studio (AZURE)
+##### c) Visual Studio (AZURE)
 https://azureforeducation.microsoft.com/devtools
 Log in with your FH credentials
 
