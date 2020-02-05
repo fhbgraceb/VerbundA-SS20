@@ -21,13 +21,15 @@ https://www.jetbrains.com/idea/download/#section=windows
 https://azureforeducation.microsoft.com/devtools
 Log in with your FH credentials
 
-### 2. Gitkraken (Grafic User Interface Git - mac und windows)
+### 2. GIT Umgebung
+Sign up for git here: https://github.com/join
+
+#### 2a) Gitkraken (Grafic User Interface Git - mac und windows)
 https://www.gitkraken.com/download
 
-### 3. or if you like shell commands: Git Ba$h (keine GUI !!! win )
+### 2b) or if you like shell commands: Git Ba$h (keine GUI !!! win )
 https://gitforwindows.org/
-#### how-to
-https://hackernoon.com/install-git-on-windows-9acf2a1944f0
+
 #### ein paar commands
 ##### $ git init [project-name]  
 Creates a new local repository with the spicified name
@@ -43,3 +45,5 @@ Snapshots the file in preparation for versioning
 Records file snapshots permantly in version history
 ##### $ git push origin [branch-name]
 Pushing commit online on origin branch
+
+learn more? https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
