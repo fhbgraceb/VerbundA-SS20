@@ -23,6 +23,8 @@ Log in with your FH credentials
 
 ### 2. GIT Umgebung
 Sign up for git here: https://github.com/join
+install one of the following environments
+clone this repo or even better send me your email adress/username so I can add you here as collaborator
 
 #### 2a) Gitkraken (Grafic User Interface Git - mac und windows)
 https://www.gitkraken.com/download
