@@ -2,7 +2,7 @@
 
 ## Installation 
 
-### JAVA Umgebung
+### 1.JAVA Umgebung
 
 #### JDK first
 https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
@@ -21,10 +21,10 @@ https://www.jetbrains.com/idea/download/#section=windows
 https://azureforeducation.microsoft.com/devtools
 Log in with your FH credentials
 
-### Gitkraken (Grafic User Interface Git - mac und windows)
+### 2.Gitkraken (Grafic User Interface Git - mac und windows)
 https://www.gitkraken.com/download
 
-### Git Ba$h (keine GUI !!! win )
+### 3. or if you like shell commands: Git Ba$h (keine GUI !!! win )
 https://gitforwindows.org/
 #### how-to
 https://hackernoon.com/install-git-on-windows-9acf2a1944f0
