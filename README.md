@@ -29,7 +29,7 @@ clone this repo or even better send me your email adress/username so I can add y
 #### 2a) Gitkraken (Grafic User Interface Git - mac und windows)
 https://www.gitkraken.com/download
 
-### 2b) or if you like shell commands: Git Ba$h (keine GUI !!! win )
+#### 2b) or if you like shell commands: Git Ba$h (keine GUI !!! win )
 https://gitforwindows.org/
 
 #### ein paar commands
