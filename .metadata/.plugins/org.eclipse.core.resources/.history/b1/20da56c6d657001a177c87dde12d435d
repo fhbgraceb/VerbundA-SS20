@@ -1,0 +1,30 @@
+package zweiteHausuebung.Schleifen;
+
+public class h_NMalN {
+	/*
+	Aufgabe:
+	8.NMalN: Lesen Sie eine Zahl (n) ein 
+	und berechnen Sie mit einer Schleife:
+	1 * n + 2 * n + 3 * n + ... + n * n
+	*/
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		long n;
+		
+		System.out.print("Bitte n eingeben: ");
+		n = s.nextLong();
+				
+		System.out.println("Produkt n mal n beträgt: " + nMalnCalc(n));
+	}
+	
+	public static long nMalnCalc(long n){
+		long summe = 0;
+		
+		for (long i = 1; i <= n; i++)
+		{
+			summe += i * n;
+		}
+		
+		return summe;
+	}
+}

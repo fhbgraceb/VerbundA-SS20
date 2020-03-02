@@ -1,0 +1,44 @@
+package zweiteHausuebung.Schleifen;
+
+import java.util.Scanner;
+
+public class j_Aufsteigend {
+	/*
+	Aufgabe:
+	10.Aufsteigend: Lesen Sie beliebig 5 Zahlen ein. Geben Sie an, 
+	ob die Zahlen aufsteigend sortiert sind.
+	Beispiele:
+	1, 3, 6, 8, 13, 0 – aufsteigend sortiert
+	2, 5, 7, 5, 8, 9, 0 – nicht aufsteigend sortiert (5 kommt nach 7, ist aber kleiner als 7)
+	*/
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int vorigeZahl;
+		int neueZahl;
+		boolean aufsteigend;
+		
+		aufsteigend = true;
+		System.out.print("Bitte geben Sie eine Zahl ein (Abschluss mit 0): ");
+		neueZahl = s.nextInt();
+		while (neueZahl != 0){
+			vorigeZahl = neueZahl;
+			System.out.print("Bitte geben Sie eine Zahl ein (Abschluss mit 0): ");
+			neueZahl = s.nextInt();
+			if (neueZahl != 0){
+				if (! (vorigeZahl < neueZahl)){
+					aufsteigend = false;
+				}
+			}
+		}
+		
+		if (aufsteigend){
+			System.out.println("Die Zahlen sind aufsteigend sortiert.");
+		}
+		else{
+			System.out.println("Die Zahlen sind nicht aufsteigend sortiert.");
+		}
+		
+		s.close();
+	}
+
+}

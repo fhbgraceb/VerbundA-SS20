@@ -1,0 +1,10 @@
+package dritteEinheit;
+
+public class EinmalEins {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

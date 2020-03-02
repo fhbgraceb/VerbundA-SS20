@@ -1,0 +1,43 @@
+package zweiteHausuebung.Schleifen;
+
+import java.util.Scanner;
+
+public class k_ZweierPotenz {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int zahl;
+		int teiler;
+		
+		System.out.println(" *** Programm Zweierpotenz - Variante 2 ***");
+		
+//		System.out.println("Tests");
+//		System.out.println("Test mit   17 - sollte    1 ergeben: " + zweierPotenz(17));
+//		System.out.println("Test mit   48 - sollte   16 ergeben: " + zweierPotenz(48));
+//		System.out.println("Test mit 1024 - sollte 1014 ergeben: " + zweierPotenz(1024));
+
+		System.out.print("Bitte geben Sie eine Zahl ein: ");
+		zahl = s.nextInt();
+		
+		teiler = zweierPotenz(zahl);
+		
+		System.out.println("Die gr��te Zweierpotenz, die " + zahl + " teilt ist: " + teiler);
+		
+		s.close();
+	}
+	
+	public static int zweierPotenz (int zahl)
+	{
+		int teiler;
+		
+		teiler = 1;
+		while (zahl % teiler == 0)
+		{
+			teiler *= 2;
+		}
+		teiler /= 2;
+		
+		return teiler;
+	}
+
+}

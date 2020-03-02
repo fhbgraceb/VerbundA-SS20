@@ -1,0 +1,27 @@
+package zweiteHausuebung.Schleifen;
+
+import java.util.Scanner;
+
+public class Fakultaetlight {
+	public static void main(String[] args) {
+			Scanner numberin = new Scanner(System.in);
+			int number;
+			
+			System.out.print("Bitte n eingeben: ");
+			number = numberin.nextInt();
+					
+			System.out.println("Die Summe beträgt: " + fakultaet(number));
+		}
+
+		public static int fakultaet(int n){
+			int fakultaet = 1;		// Startwert 1, weil multipliziert wird.
+			
+			for (int i = 1; i <= n; i++)
+			{
+				fakultaet *= i;
+			}
+			
+			return fakultaet;
+		}
+
+}

@@ -1,0 +1,44 @@
+package zweiteHausuebung.Schleifen;
+
+public class f_PrimzahlAll {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int zahl;
+		
+		System.out.print("Bitte die Zahl eingeben: ");
+		zahl = s.nextInt();
+		
+		/* 
+		 * �ussere Schleife um eine Zahl nach der anderen zu Testen.
+		 * Ausgabe der Zahlen erfolgt in der Schleife.
+		 */
+		System.out.println("Primzahlen bis" + zahl + ":");
+		for (int n = 2; n < zahl; n++)
+		{
+			if (istPrimzahl(n))
+			{
+				System.out.print(n + "\t");
+			}
+		}
+
+	}
+	
+	public static boolean istPrimzahl(int n){
+		boolean istPrimzahl = true;
+		
+		// Test ob es eine Primzahl ist
+		// Primzahl ist nur durch 1 und sich selbst teilbar
+		//   wenn es durch andere Zahl teilbar ist: keine Primzahl
+		for (int i = 2;  i < n; i++)
+		{
+			if (n % i == 0)
+			{
+				istPrimzahl = false;
+			}	
+		}
+		
+		return istPrimzahl;
+	}
+
+}

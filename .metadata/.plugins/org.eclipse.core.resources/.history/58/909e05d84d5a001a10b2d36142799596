@@ -1,0 +1,10 @@
+package dritteEinheit;
+
+public class Uhrzeit {
+
+	public static void main(String[] args) {
+		Clock realClock=Clock.system(zoneId);
+
+	}
+
+}

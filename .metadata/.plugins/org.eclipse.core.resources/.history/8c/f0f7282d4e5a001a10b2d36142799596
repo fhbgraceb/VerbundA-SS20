@@ -1,0 +1,14 @@
+package dritteEinheit;
+
+import java.time.Clock;
+import java.time.ZoneId;
+
+public class Uhrzeit {
+
+	public static void main(String[] args) {
+		 ZoneId zoneId = ZoneId.of("Europe/Vienna"); 
+		Clock realClock=Clock.system(zoneId);
+
+	}
+
+}

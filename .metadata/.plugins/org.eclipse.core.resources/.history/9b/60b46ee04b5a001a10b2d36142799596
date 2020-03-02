@@ -1,0 +1,17 @@
+package dritteEinheit;
+
+public class Schleifen {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 100; i++) {
+			
+			if (i%2==0) {
+				System.out.println(i + "ist eine gerade Zahl");
+			}else {
+				System.out.println(i + "ist eine ungerade Zahl");
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,37 @@
+package zweiteHausuebung.Schleifen;
+
+public class l_PerfekteZahl {
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		int zahl;
+		int teilerSumme;
+		String eigenschaft;
+		
+		System.out.print("Bitte geben Sie eine Zahl ein: ");
+		zahl = s.nextInt();
+		
+		teilerSumme = 0;
+
+		for (int teiler = 1; teiler < zahl; teiler++){
+			if (zahl % teiler == 0){
+				teilerSumme += teiler;
+			}
+		}
+		
+
+		if (teilerSumme < zahl){
+			eigenschaft = "defizient";
+		} else if (teilerSumme > zahl){
+			eigenschaft = "abundant";
+		}
+		else{
+			eigenschaft = "perfekt";
+		}
+		
+		System.out.println("zahl + " ist " + eigenschaft + ".");
+
+	}
+
+}
