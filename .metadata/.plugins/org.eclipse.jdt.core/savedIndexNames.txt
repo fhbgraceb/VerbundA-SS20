@@ -1,4 +1,3 @@
 INDEX VERSION 1.131+C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\VerbundA-SS20\.metadata\.plugins\org.eclipse.jdt.core
 1671692264.index
 859454714.index
-1947166280.index
