@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="0"/>
+	<item key="GitSelectRepositoryPage.lastRepository" value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\GIT\gl-prog-ubungen-ss2020\.git"/>
 	<list key="RepositorySelectionPage.UsedUris">
 		<item value="https://fhb190776@bitbucket.org/michaeldeutsch/gl-prog-ubungen-ss2020.git"/>
 	</list>
