@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class _GTA {
 
 	public static void main(String[] args) {
-		while (Laeuft) {
+
+		while (Leuft) {
 
 			if (Treibstoff == 0) {
 
@@ -23,7 +24,7 @@ public class _GTA {
 
 				} else {
 
-					System.out.println("Ung�ltige Eingabe.");
+					System.out.println("Ungeltige Eingabe.");
 				}
 
 			} else {
@@ -40,23 +41,23 @@ public class _GTA {
 
 	static int Treibstoff = 1;
 
-	static boolean Laeuft = true;
+	static boolean Leuft = true;
 
 	static void Tanken() {
 
-		System.out.println("Wieviel Liter m�chten Sie tanken?(max 10)");
+		System.out.println("Wieviel Liter mechten Sie tanken?(max 10)");
 
-		int Liter = scan.nextInt();
+		Treibstoff = scan.nextInt();
 
-		if (Liter > 0 && Liter <= 10) {
+		if (Treibstoff > 0 && Treibstoff <= 10) {
 
-			Treibstoff = Liter;
-			Abfangen();
+			//Treibstoff = Liter;
+			//Abfangen();
 			Fahren();
 
 		} else {
 
-			System.out.println("Ung�ltige Literanzahl gew�hlt.");
+			System.out.println("Ungeltige Literanzahl gewehlt.");
 
 		}
 
@@ -64,7 +65,7 @@ public class _GTA {
 
 	static void Fahren() {
 
-		System.out.println("In welche Richtung m�chten Sie fahren?(Norden, Osten, S�den, Westen, Ende)");
+		System.out.println("In welche Richtung mechten Sie fahren?(Norden, Osten, Seden, Westen, Ende)");
 		System.out.println("Treibstoffstand: " + Treibstoff);
 		String Richtung = scan.nextLine();
 
@@ -73,9 +74,9 @@ public class _GTA {
 			System.out.println("Sie fahren nach Norden.");
 			Treibstoff--;
 
-		} else if (Richtung.equalsIgnoreCase("S�den")) {
+		} else if (Richtung.equalsIgnoreCase("Seden")) {
 
-			System.out.println("Sie fahren nach S�den.");
+			System.out.println("Sie fahren nach Seden.");
 			Treibstoff--;
 
 		} else if (Richtung.equalsIgnoreCase("Westen")) {
@@ -94,7 +95,7 @@ public class _GTA {
 
 		} else {
 
-			System.out.println("Ung�ltige Eingabe");
+			System.out.println("Ungeltige Eingabe");
 
 		}
 
@@ -109,28 +110,28 @@ public class _GTA {
 		if (Antwort.equalsIgnoreCase("Ja")) {
 
 			System.out.println("Spiel beendet.");
-			Laeuft = false;
+			Leuft = false;
 
 		} else if (Antwort.equalsIgnoreCase("Nein")) {
 
 		} else {
 
-			System.out.println("Ung�ltige Eingabe.");
+			System.out.println("Ungeltige Eingabe.");
 
 		}
 
 	}
 
-	static void Abfangen() {
-
-		// Nach der Treibstoff Eingabe bekomme ich immer einer automatische Eingabe
-		// ohne die tastatur zu werwenden welche in die Fahren Methode eingeht
-		// und "ung�ltige Eingabe." ausl�st Ich habe Abfangen eingebaut um diese
-		// abzufangen
-
-		String Abfangen = scan.nextLine();
-
-		//System.out.println(Abfangen);
-	}
+//	static void Abfangen() {
+//
+//		// Nach der Treibstoff Eingabe bekomme ich immer einer automatische Eingabe
+//		// ohne die tastatur zu werwenden welche in die Fahren Methode eingeht
+//		// und "ungeltige Eingabe." auslest Ich habe Abfangen eingebaut um diese
+//		// abzufangen
+//
+//		String Abfangen = scan.nextLine();
+//
+//		//System.out.println(Abfangen);
+//	}
 
 }
