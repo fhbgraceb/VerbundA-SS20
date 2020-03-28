@@ -52,7 +52,7 @@ public class _GTA {
 		if (Treibstoff > 0 && Treibstoff <= 10) {
 
 			//Treibstoff = Liter;
-			//Abfangen();
+			Abfangen();
 			Fahren();
 
 		} else {
@@ -122,16 +122,16 @@ public class _GTA {
 
 	}
 
-//	static void Abfangen() {
-//
-//		// Nach der Treibstoff Eingabe bekomme ich immer einer automatische Eingabe
-//		// ohne die tastatur zu werwenden welche in die Fahren Methode eingeht
-//		// und "ungeltige Eingabe." auslest Ich habe Abfangen eingebaut um diese
-//		// abzufangen
-//
-//		String Abfangen = scan.nextLine();
-//
-//		//System.out.println(Abfangen);
-//	}
+	static void Abfangen() {
+
+		// Nach der Treibstoff Eingabe bekomme ich immer einer automatische Eingabe
+		// ohne die tastatur zu werwenden welche in die Fahren Methode eingeht
+		// und "ungeltige Eingabe." auslest Ich habe Abfangen eingebaut um diese
+		// abzufangen
+
+		String Abfangen = scan.nextLine();
+
+		//System.out.println(Abfangen);
+	}
 
 }
