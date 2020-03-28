@@ -9,11 +9,11 @@ public class _GTA {
 	public static void main(String[] args) {
 		boolean driving=true;
 		int tank=1;
-
+	
 		while (driving) {
 			if (tank != 0) {
-				System.out.println("Wohin wollen Sie fahren?[Norden, Osten, Süden, Westen, Quit]\nIm Tank befindet sich " + tank + " Liter.\n");
-				String direction = s.nextLine();
+				System.out.println("Wohin wollen Sie fahren?[Norden/Osten/Süden/Westen/Quit]\nIm Tank befindet sich " + tank + " Liter.");
+				String direction = s.next();
 
 				if (direction.equalsIgnoreCase("Norden")) {
 					System.out.println("Sie fahren nach Norden.");
@@ -33,8 +33,8 @@ public class _GTA {
 					System.out.println("Eingabe ungültig...");
 				}
 			} else {
-				System.out.println("Tank leer...tanken oder Spiel beenden?[Tanken, Quit]");
-				String fill = s.nextLine();
+				System.out.println("Tank leer...tanken oder Spiel beenden?[Tanken/Quit]");
+				String fill = s.next();
 				if (fill.equalsIgnoreCase("Tanken")) {
 					tank=gettank(tank);
 				} else if (fill.equalsIgnoreCase("Quit")) {
@@ -59,8 +59,8 @@ public class _GTA {
 	}
 	
 	private static boolean reallyQuit() {
-		System.out.println("Sind Sie sicher, dass Sie das Spiel beenden wollen?(Ja, Nein)");
-		String input = s.nextLine();
+		System.out.println("Sind Sie sicher, dass Sie das Spiel beenden wollen?[Ja/Nein]");
+		String input = s.next();
 		
 		if (input.equalsIgnoreCase("Ja")) {
 			System.out.println("Exit---------------------------------");
