@@ -15,6 +15,8 @@ public class j_nHochN {
 	 */
 
 	public static void main(String[] args) {
+		System.out.print("j_nHochN_____________________\n");
+		
 		//siehe Abgabe hausuebung2.aSchleifen
 		
 		Scanner s = new Scanner(System.in);

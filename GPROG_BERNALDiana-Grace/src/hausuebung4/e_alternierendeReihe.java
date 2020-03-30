@@ -8,11 +8,13 @@ public class e_alternierendeReihe {
 	 */
 
 	public static void main(String[] args) {
-		final int glieder = 100;
+		System.out.print("e_alternierendeReihe_____________________\n");
+		
+		final int sum = 100;
 		double reihe;
 		
 		reihe = 0;
-		for (double i = 1; i <= glieder; i++)
+		for (double i = 1; i <= sum; i++)
 		{
 			if (i % 2 == 0){	
 				reihe -= 1 / i; 
@@ -22,7 +24,7 @@ public class e_alternierendeReihe {
 			}
 		}
 		
-		System.out.println("Die Summe der Reihe bis zum " + glieder + ". Glied ist: " + reihe);
+		System.out.println("Summe der Reihe bis zum " + sum + ". Glied ist " + reihe);
 	}
 
 }

@@ -17,34 +17,24 @@ public class h_Intervall2 {
 	 */
 	
 	public static void main(String[] args) {
-			Scanner s = new Scanner (System.in);
-			int eingabe = -1;
-			int grenzeU = 0;
-			int grenzeO = 0;
-			int kleiner = 0;
-			int groeﬂer = 0;
-			int imIntervall = 0;
+		System.out.print("h_Intervall2_____________________\n");
 		
+			Scanner s = new Scanner (System.in);
 			
+			int[] zahlen=new int[2];
 			
-			while(eingabe != 0){
-				System.out.print("Geben Sie eine Zahl ein: ");
-				eingabe = s.nextInt();
-				
-				if(eingabe < grenzeU && eingabe != 0) kleiner++;
-
-				else if (eingabe > grenzeO) groeﬂer++;
-
-				else if (eingabe >= grenzeU && eingabe <= grenzeO) imIntervall++;
-				
+			for (int i = 0; i < zahlen.length; i++) {
+				System.out.print("Geben Sie die " + (i+1) + ".Zahl ein: ");
+				zahlen[i] = s.nextInt();
+//				zahlen[i]=input;
 			}
-			System.out.println("---------------RESULT-------------");
-			System.out.println("Dar¸ber waren  " +groeﬂer+" Zahlen");
-			System.out.println("Im Intervall waren "+imIntervall+" Zahlen");
-			System.out.println("Darunter waren " +kleiner+" Zahlen");
-			System.out.println("------------------------");
+			
+			if (zahlen[0]<zahlen[1]) {
+				for (int k = zahlen[0]; k <= zahlen[1]; k++) {
+					System.out.printf(k+", ");
+				}
+			}
 			
 			s.close();
 	}
-
 }

@@ -15,11 +15,12 @@
     <fullyQualifiedTypeName name="java.time.Clock"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ThreadLocalRandom"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="hausuebung3.bDreiMusketiere"/>
     <fullyQualifiedTypeName name="java.lang.ThreadLocal"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="hausuebung4.a_GGT"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.runtime.StaticBaseConstructor"/>
 </qualifiedTypeNameHistroy>

@@ -9,6 +9,8 @@ public class i_nMalN {
 	 */
 
 	public static void main(String[] args) {
+		System.out.print("i_nMalN_____________________\n");
+		
 		//siehe Abgabe hausuebung2.aSchleifen
 		
 		Scanner s = new Scanner(System.in);

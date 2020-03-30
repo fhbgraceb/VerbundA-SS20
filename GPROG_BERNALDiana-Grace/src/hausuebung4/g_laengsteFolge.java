@@ -16,35 +16,37 @@ public class g_laengsteFolge {
 	 */
 
 	public static void main(String[] args) {
+		System.out.print("g_laengsteFolge_____________________\n");
+		
 		Scanner s = new Scanner(System.in);
-		int vorigeZahl;
-		int neueZahl;
-		int aufsteigend;
-		int aufsteigendMax;
+		int oldz;
+		int newz;
+		int ascending;
+		int ascendingmax;
 			
-		aufsteigendMax = 0;
-		System.out.print("Bitte geben Sie eine Zahl ein (Abschluss mit 0): ");
-		neueZahl = s.nextInt();
-		aufsteigend = 1;
-		while (neueZahl != 0){
-			vorigeZahl = neueZahl;
-			System.out.print("Bitte geben Sie eine Zahl ein (Abschluss mit 0): ");
-			neueZahl = s.nextInt();
-			if (neueZahl != 0){
-				if (vorigeZahl < neueZahl){
-						aufsteigend++;
+		ascendingmax = 0;
+		System.out.print("Geben Sie eine Zahl ein [Abschluss mit 0]: ");
+		newz = s.nextInt();
+		ascending = 1;
+		while (newz != 0){
+			oldz = newz;
+			System.out.print("Bitte geben Sie eine Zahl ein [Abschluss mit 0]: ");
+			newz = s.nextInt();
+			if (newz != 0){
+				if (oldz < newz){
+						ascending++;
 					}
 				else{
-					if (aufsteigend > aufsteigendMax){
-							aufsteigendMax = aufsteigend;
+					if (ascending > ascendingmax){
+							ascendingmax = ascending;
 						}
-						aufsteigend = 1;
+						ascending = 1;
 				}
 			}
 		}
 
 		System.out.println();
-		System.out.printf("Die längste aufsteigende Folge hat %d Elemente\n", aufsteigendMax);
+		System.out.printf("Die längste aufsteigende Folge hat %d Elemente", ascendingmax);
 
 		s.close();
 	}

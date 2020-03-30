@@ -9,6 +9,8 @@ public class d_schnecke {
 	 */
 
 	public static void main(String[] args) {
+		System.out.print("d_schnecke_____________________\n");
+		
 		double hoehe = 450;
 		double schnecke = 0;
 		int zaehler = 0;
@@ -32,17 +34,13 @@ public class d_schnecke {
 	}
 	
 	static double tag(double num) {
-
 		num = num + 50;
 		return num;
-
 	}
 
 	static double nacht(double num) {
-
 		num = num - (num / 10);
 		return num;
-
 	}
 
 }

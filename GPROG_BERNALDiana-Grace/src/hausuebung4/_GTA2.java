@@ -4,134 +4,84 @@ import java.util.Scanner;
 
 public class _GTA2 {
 
+	static Scanner s = new Scanner(System.in);
+
 	public static void main(String[] args) {
+		boolean driving=true;
+		int tank=1;
+	
+		while (driving) {
+			if (tank != 0) {
+				System.out.println("Wohin wollen Sie fahren?[Norden/Osten/Süden/Westen/Quit]\nIm Tank befindet sich " + tank + " Liter.");
+				String direction = s.next();
 
-		while (Leuft) {
-
-			if (Treibstoff == 0) {
-
-				System.out.println("Kein Treibstoff mehr, wollen sie tanken oder das Spiel beenden?(Tanken, Ende)");
-
-				String Tanken = scan.nextLine();
-
-				if (Tanken.equalsIgnoreCase("Tanken")) {
-
-					Tanken();
-
-				} else if (Tanken.equalsIgnoreCase("Ende")) {
-
-					Ende();
-
-				} else {
-
-					System.out.println("Ungeltige Eingabe.");
+				switch (direction.toLowerCase()) {
+				case "norden": {
+					System.out.println("Sie fahren nach Norden.");
+					tank--;
+					break;
 				}
-
+				case "osten": {
+					System.out.println("Sie fahren nach Osten.");
+					tank--;
+					break;
+				}
+				case "süden": {
+					System.out.println("Sie fahren nach Süden.");
+					tank--;
+					break;
+				}
+				case "westen": {
+					System.out.println("Sie fahren nach westen.");
+					tank--;
+					break;
+				}
+				case "quit": {
+					driving=reallyQuit();
+					break;
+				}
+				default:
+					System.out.println("Unexpected value: " + direction.toLowerCase());
+				}
 			} else {
-
-				Fahren();
-
+				System.out.println("Tank leer...tanken oder Spiel beenden?[Tanken/Quit]");
+				String fill = s.next();
+				if (fill.equalsIgnoreCase("Tanken")) {
+					tank=gettank(tank);
+				} else if (fill.equalsIgnoreCase("Quit")) {
+					driving=reallyQuit();
+				} else {
+					System.out.println("Eingabe ungültig...");
+				}		
 			}
+		}//end while
+	}//end main
+	
+	public static int gettank(int liter) {
+		System.out.println("Wieviel Liter möchten Sie tanken? Maximal 35 möglich.");
+		liter = s.nextInt();
 
-		}
-
-	}
-
-	static Scanner scan = new Scanner(System.in);
-
-	static int Treibstoff = 1;
-
-	static boolean Leuft = true;
-
-	static void Tanken() {
-
-		System.out.println("Wieviel Liter mechten Sie tanken?(max 10)");
-
-		Treibstoff = scan.nextInt();
-
-		if (Treibstoff > 0 && Treibstoff <= 10) {
-
-			//Treibstoff = Liter;
-			Abfangen();
-			Fahren();
-
+		if (liter > 0 && liter <= 35) {
+			return liter;
 		} else {
-
-			System.out.println("Ungeltige Literanzahl gewehlt.");
-
+			System.out.println("Ungültig. Maximal 35 Liter möglich.");
 		}
-
+		return liter;
 	}
-
-	static void Fahren() {
-
-		System.out.println("In welche Richtung mechten Sie fahren?(Norden, Osten, Seden, Westen, Ende)");
-		System.out.println("Treibstoffstand: " + Treibstoff);
-		String Richtung = scan.nextLine();
-
-		if (Richtung.equalsIgnoreCase("Norden")) {
-
-			System.out.println("Sie fahren nach Norden.");
-			Treibstoff--;
-
-		} else if (Richtung.equalsIgnoreCase("Seden")) {
-
-			System.out.println("Sie fahren nach Seden.");
-			Treibstoff--;
-
-		} else if (Richtung.equalsIgnoreCase("Westen")) {
-
-			System.out.println("Sie fahren nach Westen.");
-			Treibstoff--;
-
-		} else if (Richtung.equalsIgnoreCase("Osten")) {
-
-			System.out.println("Sie fahren nach Osten.");
-			Treibstoff--;
-
-		} else if (Richtung.equalsIgnoreCase("Ende")) {
-
-			Ende();
-
+	
+	private static boolean reallyQuit() {
+		System.out.println("Sind Sie sicher, dass Sie das Spiel beenden wollen?[Ja/Nein]");
+		String input = s.next();
+		
+		if (input.equalsIgnoreCase("Ja")) {
+			System.out.println("Exit---------------------------------");
+			return false;
+		} else if (input.equalsIgnoreCase("Nein")) {
+			return true;
 		} else {
-
-			System.out.println("Ungeltige Eingabe");
-
+			System.out.println("Eingabe ungültig...");
 		}
-
-	}
-
-	static void Ende() {
-
-		System.out.println("Sind Sie sicher, dass Sie das Spiel beenden wollen?(Ja, Nein)");
-
-		String Antwort = scan.nextLine();
-
-		if (Antwort.equalsIgnoreCase("Ja")) {
-
-			System.out.println("Spiel beendet.");
-			Leuft = false;
-
-		} else if (Antwort.equalsIgnoreCase("Nein")) {
-
-		} else {
-
-			System.out.println("Ungeltige Eingabe.");
-
-		}
-
-	}
-
-	static void Abfangen() {
-
-		// Nach der Treibstoff Eingabe bekomme ich immer einer automatische Eingabe
-		// ohne die tastatur zu werwenden welche in die Fahren Methode eingeht
-		// und "ungeltige Eingabe." auslest Ich habe Abfangen eingebaut um diese
-		// abzufangen
-
-		String Abfangen = scan.nextLine();
-
-		//System.out.println(Abfangen);
-	}
-
+		return true;
+	}	
+	
 }

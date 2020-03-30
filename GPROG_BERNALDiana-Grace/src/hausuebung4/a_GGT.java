@@ -9,18 +9,21 @@ public class a_GGT {
 
 	public static void main(String[] args) {
 			Scanner s = new Scanner(System.in);
-			int zahl1;
-			int zahl2;
+			
+			System.out.print("a_GGT_____________________\n");
+			
+			int z1;
+			int z2;
 			int ggT;
 			
-			System.out.print("erste Zahl eingeben: ");
-			zahl1 = s.nextInt();
-			System.out.print("zweite Zahl eingeben: ");
-			zahl2 = s.nextInt();
+			System.out.print("1.Zahl eingeben: ");
+			z1 = s.nextInt();
+			System.out.print("2.Zahl eingeben: ");
+			z2 = s.nextInt();
 			
-			ggT = ggTmeth(zahl1, zahl2);
+			ggT = ggTmeth(z1, z2);
 			
-			System.out.printf("größte gemeinsame Teiler von %d und %d ist %d\n", zahl1, zahl2, ggT);
+			System.out.printf("größte gemeinsame Teiler von %d und %d ist %d\n", z1, z2, ggT);
 			
 			s.close();
 	}

@@ -20,17 +20,19 @@ public class c_akummuliert {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner (System.in);
-		int grenze = 0;
+		System.out.print("c_akummuliert_____________________\n");
+		
+		int max = 0;
 		int sum = 0;
 		int zahl = 0;
 		
-		System.out.print("Geben Sie eine Grenze ein:");
-		grenze = s.nextInt();
+		System.out.print("Grenze eingeben:");
+		max = s.nextInt();
 		
-		for (int i = 1; i <= grenze; i++)
+		for (int i = 1; i <= max; i++)
 		{
 			sum += i;
-			if (sum >= grenze)
+			if (sum >= max)
 			{
 				zahl = i;
 				break;

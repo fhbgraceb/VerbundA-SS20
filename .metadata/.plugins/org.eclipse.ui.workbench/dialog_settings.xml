@@ -24,6 +24,9 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\dbernal\OneDrive - Capgemini\Desktop\GTA_Debug.zip"/>
+			<item value="C:\Users\dbernal\OneDrive - Capgemini\Desktop\hausuebung4-gprog_GTALEICHTER.zip"/>
+			<item value="C:\Users\dbernal\OneDrive - Capgemini\Desktop\hausuebung4-gprog.zip"/>
 			<item value="C:\Users\dbernal\OneDrive - Capgemini\Desktop\workspace.zip"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\Aufgaben_docs\Aufgabe3\dritteHausuebung_BERNAL_Diana-Grace.zip"/>
 			<item value="C:\Users\dbernal\tmp\hausuebung3-draft-gleichverteilung.zip"/>
