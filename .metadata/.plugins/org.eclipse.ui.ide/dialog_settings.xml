@@ -7,14 +7,15 @@
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\dbernal\tmp\Dropbox\uni Stuff\PIT\2.semester\Programmieren\eclipse-workspace\LocalDropboxSpace"/>
 			<item value="C:\Users\dbernal\tmp\Dropbox\uni Stuff\PIT\2.semester\Programmieren\eclipse-workspace\GrundlagenProgrammieren"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\VerbundA-SS20"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\GIT\gl-prog-ss2020"/>
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value="C:\Users\dbernal\tmp\WHOLEWORKSPACE_March3BackUP.zip"/>
 			<item value=""/>
+			<item value="C:\Users\dbernal\tmp\WHOLEWORKSPACE_March3BackUP.zip"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\ErsteEinheit.zip"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\test2.zip"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\test.zip"/>

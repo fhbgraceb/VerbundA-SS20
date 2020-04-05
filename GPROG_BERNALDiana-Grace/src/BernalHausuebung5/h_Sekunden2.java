@@ -10,50 +10,11 @@ public class h_Sekunden2 {
 	Tagen, Stunden, Minuten und Sekunden in die entsprechende Anzahl von
 	Sekunden. [6] 
 	 */
-
-	public static long zeitInSekunden(int jahre, int monate, int tage, int stunden, int minuten, int sekunden)
-	{
-		/*
-		 *  Die Umrechnung zwischen Sekunden und Minuten, Minuten und Stunden, etc
-		 *  sind stets fix und sollten als Konstante definiert werden.
-		 *  
-		 *  Dies verhindert eher dass Tippfehlern übersehen werden.
-		 */
-		final int sekundenProMinute = 60;
-		final int minutenProStunde = 60;
-		final int stundenProTag = 24;
-		final int tageProMonat = 30;
-		final int monateProJahr = 12;
-
-		/*
-		 * Im Prinzip wird hier etwas ähnliches wie das Horner-Schema verwendet
-		 * Wegen der Übersichtlichkeit wird der Ausdruck
-		 * 
-		 * alleSekunden = ((((jahre * monateProJahr + monate) * * tageProMonat + tage) * stundenProTag + stunden) * minutenProStunde + minuten) * sekundenProMinute + sekunden;
-		 * 
-		 * aber auf mehrere Zeilen aufgeteilt:
-		 */
-		long alleMonate = 0;
-		long alleTage = 0;
-		long alleStunden = 0;
-		long alleMinuten = 0;
-		long alleSekunden = 0;
-
-		alleMonate = jahre * monateProJahr + monate;
-		alleTage = alleMonate * tageProMonat + tage;
-		alleStunden = alleTage * stundenProTag + stunden;
-		alleMinuten = alleStunden * minutenProStunde + minuten;
-		alleSekunden = alleMinuten * sekundenProMinute + sekunden;
-			
-		return alleSekunden;
-	}
 	
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		
-		
-		long alleSekunden;		// long: damit man auch viele, viele Sekunden umrechnen kann
+		long alleSekunden;
 
 		int sekunden;
 		int minuten;
@@ -61,32 +22,6 @@ public class h_Sekunden2 {
 		int monate;
 		int tage;
 		int jahre;
-		
-		/*
-		 * Zum Testen, ob das Programm richtig rechnet:
-		 * Die Ergebnis-Werte stammen aus dem Programm Sekunden1
-		 * (Dieses wurde bereits überprüft und für richtig befunden.)
-		 *
-		 * Wenn die Ergebnisse stimmen, die Testwerte auskommentieren
-		 * um sie bei späteren Änderungen nochmals zu verwenden.
-		 * 
-		 * Durch die Anweisung
-		 * 
-		 * System.exit(0);
-		 * 
-		 * nach den Testdaten wird das Programm nach den Testdaten beendet
-		 * (und man muss keine Werte mehr einlesen).
-		 */
-//		System.out.println(zeitInSekunden(0, 0, 0, 0, 2, 7));		// 127
-//		System.out.println(zeitInSekunden(0, 0, 0, 1, 0, 0));		// 3600
-//		System.out.println(zeitInSekunden(1, 0, 0, 0, 0, 0));		// 31104000
-//		System.out.println(zeitInSekunden(1, 1, 1, 1, 1, 1));		// 33786061
-//		System.out.println(zeitInSekunden(1000, 0, 0, 0, 0, 0));	// 31104000000
-//
-//		System.exit(0);
-		
-		System.out.println("******************************************");
-		System.out.println("          *** Zeitumrechnung ***");
 		
 		System.out.println("Bitte die Zeit eingeben, die umgerechnet werden soll!");
 		System.out.print("Jahre: ");
@@ -102,9 +37,8 @@ public class h_Sekunden2 {
 		System.out.print("Sekunden: ");
 		sekunden = s.nextInt();
 
-		alleSekunden = zeitInSekunden(jahre, monate, tage, stunden, minuten, sekunden);
-		
-		System.out.println("\n------------------------------------------\n");		
+		alleSekunden = zeitInSek(jahre, monate, tage, stunden, minuten, sekunden);
+			
 		System.out.printf("%5d Jahr(e) \n", jahre);
 		System.out.printf("%5d Monat(e) \n", monate);
 		System.out.printf("%5d Tag(e) \n", tage);
@@ -113,10 +47,30 @@ public class h_Sekunden2 {
 		System.out.printf("%5d Sekunde(n) \n", sekunden);
 		System.out.println("sind: ");
 		System.out.println(alleSekunden + " Sekunden.");
-	
-		System.out.println("******************************************");
 		
 		s.close();
+	}
+	
+	public static long zeitInSek(int jahre, int mon, int tag, int stund, int min, int sek) {
+		final int sekProMin = 60;
+		final int minProStun = 60;
+		final int stunProTag = 24;
+		final int tageProMon = 30;
+		final int monProJahr = 12;
+
+		long alleMon = 0;
+		long alleTag = 0;
+		long alleStund = 0;
+		long alleMin = 0;
+		long alleSek = 0;
+
+		alleMon = jahre * monProJahr + mon;
+		alleTag = alleMon * tageProMon + tag;
+		alleStund = alleTag * stunProTag + stund;
+		alleMin = alleStund * minProStun + min;
+		alleSek = alleMin * sekProMin + sek;
+			
+		return alleSek;
 	}
 
 }

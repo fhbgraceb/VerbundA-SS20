@@ -18,14 +18,14 @@ public class e_Schottersaecke {
 		double voll;
 		int saecke;
 
-		System.out.print("LKW Gewicht leer?");
+		System.out.print("Was ist das LKW Gewicht leer?");
 		empty = s.nextDouble();
-		System.out.print("LKW Gewich beladen?");
+		System.out.print("Was ist das LKW Gewicht wenn es beladen ist?");
 		voll = s.nextDouble();
 		
 		saecke = berechnungSaecke(empty, voll);
 
-		System.out.println("LKW tranportiert " + saecke + " Säcke.");
+		System.out.println("LKW tranportiert gerade" + saecke + " Säcke.");
 
 		s.close();
 	}

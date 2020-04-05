@@ -16,7 +16,7 @@ public class g_Horner {
 		double a, b, c;
 		double poly;
 		
-		System.out.println("Polynom: a * x^2 + b * x + c");
+		System.out.println("Polynomfunktion 2. Grades: a * x^2 + b * x + c");
 		System.out.println("Bitte den Koeffizienten des jeweiligen Polynoms eingeben.");
 		
 		System.out.print("a? ");
@@ -32,7 +32,7 @@ public class g_Horner {
 		poly = hornerSchema(a, b, c, x);
 		
 		System.out.printf("Wert des Polynoms\n%9.2f * x^2 + %9.2f * x + %9.2f", a, b, c);
-		System.out.printf(" an der Stelle %9.2f : %9.2f\n", x, poly);
+		System.out.printf(" an der Stelle %9.2f = %9.2f\n", x, poly);
 
 	}
 	
