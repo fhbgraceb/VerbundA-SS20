@@ -1,0 +1,10 @@
+package zweiteHausuebung.Schleifen;
+
+public class f_PrimzahlAll {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

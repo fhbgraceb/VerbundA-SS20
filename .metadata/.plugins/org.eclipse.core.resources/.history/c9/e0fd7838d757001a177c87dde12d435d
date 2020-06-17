@@ -1,0 +1,10 @@
+package zweiteHausuebung.Schleifen;
+
+public class i_NHochN {
+	/*
+	Aufgabe:
+	9.NHochN: Lesen Sie eine Zahl (n) ein und berechnen Sie:
+	n Σ ii i=1
+	also 11+22+33+...+nn oder 1 + 2 * 2 + 3 * 3 * 3 + ... + n * n * ... * n)
+	*/
+}

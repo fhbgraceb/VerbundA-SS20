@@ -1,0 +1,39 @@
+package BernalHausuebung5;
+
+import java.util.Scanner;
+
+public class e_Schottersaecke {
+	/*
+	 5. Schottersäcke: Sie sitzen an der LKW-Waage an der Ausfahrt eines
+	Schotterwerkes. In diesem wird Schotter in 50 kg Säcke verpackt und mit LKWs
+	abtransportiert. Geben Sie das Leergewicht des LKWs und das Gewicht des
+	beladenen LKWs ein und berechnen Sie daraus wie viele Säcke er geladen hat.
+	Gehen Sie dabei davon aus, dass die Säcke immer voll beladen worden sind. [4] 
+	 */
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		double leer;		
+		double voll;
+		int anzahl;
+
+		System.out.print("Gewicht des leeren LKW? ");
+		leer = s.nextDouble();
+		System.out.print("Gewicht des vollen LKW? ");
+		voll = s.nextDouble();
+		
+		anzahl = anzahlSaecke(leer, voll);
+
+		System.out.println("Der LKW hat " + anzahl + " Säcke geladen.");
+
+	}
+	
+	public static int anzahlSaecke(double leer, double voll){
+		final double sackGewicht = 50.0;	
+		int ergebnis = 0;
+		ergebnis = (int)Math.round(((voll - leer) / sackGewicht));
+		return ergebnis;
+	}
+
+}

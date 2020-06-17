@@ -1,0 +1,53 @@
+package zweiteHausuebung.WennUnterprogramme;
+
+import java.util.Scanner;
+
+public class d_Taschenrechner1 {
+	/*
+	 Aufgabe:
+	 4.Taschenrechner1: Schreiben Sie eine Methode, welche 2 Werte und einen Operator (+, -, *, /) 
+	 übernimmt und das Ergebnis retourniert, anhand des Operators soll die Methode die gewünschte Berechnung ausführen 
+	 und das korrekte Ergebnis retournieren, welches anschließend via Konsole ausgegeben wird.
+	 */
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int ergebnis;
+		
+		System.out.println("Erste Zahl eingeben: ");
+		int a=s.nextInt();
+		System.out.println("Zweite Zahl eingeben: ");
+		int b=s.nextInt();
+		System.out.println("Bitte Operator eingeben (+,-,*;/)");
+		String operatorString=s.next();
+		
+		if (operatorString.equals("+")) {
+			System.out.println("Das Ergebnis lautet" + addieren(a, b));
+		}
+		
+	}
+	
+	public static int addieren(int q, int e) {
+		int ergebnis=0;
+		
+		return ergebnis;
+	}
+	
+	public static int subtrahieren(int q, int e) {
+		int ergebnis=0;
+		
+		return ergebnis;
+	}
+	
+	public static int multiplizieren(int q, int e) {
+		int ergebnis=0;
+		
+		return ergebnis;
+	}
+	
+	public static int dividieren(int q, int e) {
+		int ergebnis=0;
+		
+		return ergebnis;
+	}
+
+}

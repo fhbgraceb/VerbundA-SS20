@@ -1,0 +1,40 @@
+package zweiteHausuebung.Schleifen;
+
+import java.util.Scanner;
+
+public class c_Ziffernsumme {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		int number;
+		int reste;
+		int ziffer;
+		int ziffernsumme;
+		
+		System.out.print("Bitte eine Zahl eingeben: ");
+		number = s.nextInt();
+		reste = Math.abs(number);
+		ziffernsumme = 0;
+		while (reste > 0)
+		{
+			ziffer = reste % 10;				// letzte Ziffer holen
+			ziffernsumme += ziffer;				// zur Ziffernsumme addieren
+			reste = (reste - ziffer) / 10;	// letzte Ziffer abschneiden
+
+// Kontrollausgabe
+//			System.out.println("Ziffer: " + ziffer + " Summe: " + ziffernsumme + " Restzahl: " + restZahl);
+		}
+		
+		if (ziffernsumme % 3 == 0)
+		{
+			System.out.println(number + " ist durch 3 teilbar.");
+		}
+		else
+		{
+			System.out.println(number + " ist nicht durch 3 teilbar.");
+		}
+
+	}
+
+}

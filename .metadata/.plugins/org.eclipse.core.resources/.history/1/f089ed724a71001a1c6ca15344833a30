@@ -1,0 +1,38 @@
+package BernalHausuebung5;
+
+public class g_Horner {
+	
+	/*
+	 7. Horner: Berechnen Sie ax2+bx+c mit Hilfe des Horner-Schemas für beliebige
+	Eingaben von a, b, c und x. [4] 
+	 */
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		double x;
+		double a, b, c;
+		double polynom;
+		
+		System.out.println("Polynom: a * x^2 + b * x + c");
+		System.out.println("Bitte den Koeffizienten a des Polynoms eingeben.");
+		
+		System.out.print("a: ");
+		a = s.nextDouble();
+		System.out.print("b: ");
+		b = s.nextDouble();
+		System.out.print("c: ");
+		c = s.nextDouble();
+
+		System.out.print("Bitte den Wert von x eingeben: ");
+		x = s.nextDouble();
+		
+		polynom = horner(a, b, c, x);
+		
+		System.out.print("Wert des Polynoms ");		
+		System.out.printf("%9.2f * x^2 + %9.2f * x + %9.2f", a, b, c);
+		System.out.printf(" an der Stelle %9.2f : %9.2f\n", x, polynom);
+
+	}
+
+}

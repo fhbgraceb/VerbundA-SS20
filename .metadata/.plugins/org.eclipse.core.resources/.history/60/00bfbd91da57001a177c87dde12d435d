@@ -1,0 +1,10 @@
+package zweiteHausuebung.Schleifen;
+
+public class l_PerfekteZahl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

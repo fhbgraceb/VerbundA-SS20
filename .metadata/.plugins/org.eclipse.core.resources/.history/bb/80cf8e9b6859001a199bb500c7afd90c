@@ -1,0 +1,41 @@
+package zweiteHausuebung.Schleifen;
+
+import java.util.Scanner;
+
+public class i_NHochN {
+	/*
+	Aufgabe:
+	9.NHochN: Lesen Sie eine Zahl (n) ein und berechnen Sie:
+	n Σ ii i=1
+	also 11+22+33+...+nn 
+	oder 1 + 2 * 2 + 3 * 3 * 3 + ... + n * n * ... * n)
+	*/
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		long n;
+		
+		System.out.print("Bitte n eingeben: ");
+		n = s.nextLong();
+				
+		System.out.println(nHochN(n));
+		s.close();
+	}
+
+	public static long nHochN(long n) {
+		long summe;
+		long produkt;
+
+		summe = 0;
+
+		for (int i = 1; i <= n; i++){
+
+			produkt = 1;
+			for (int j = 1; j <= i; j++){
+				produkt *= i;
+			}
+			summe += produkt;
+		}
+		
+		return summe;
+	}
+}

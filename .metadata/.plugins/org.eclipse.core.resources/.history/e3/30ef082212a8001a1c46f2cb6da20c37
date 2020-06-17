@@ -1,0 +1,53 @@
+package BernalHausuebung8;
+
+import java.util.Scanner;
+
+public class bspGruppe8_SeltsameFolge {
+
+	public static String umwandlung(String eingabe) {
+		String ausgabe = "";
+		int anzahl;
+		char ziffer;
+		char ziffer2;
+
+		if ((eingabe == null) || (eingabe.length() == 0)) {
+			return eingabe;
+		} else {
+			ziffer = eingabe.charAt(0);
+			anzahl = 1;
+			for (int i = 1; i < eingabe.length(); i++) {
+				ziffer2 = eingabe.charAt(i);
+				if (ziffer == ziffer2) {
+					anzahl++;
+				} else {
+					ausgabe = ausgabe + anzahl + ziffer;
+					ziffer = ziffer2;
+					anzahl = 1;
+				}
+			}
+			ausgabe = ausgabe + anzahl + ziffer;
+
+			return ausgabe;
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int zahl;
+		String zahlString;
+
+		do {
+			System.out.print("Bitte eine Ziffer eingeben: ");
+			zahl = s.nextInt();
+		} while (!((zahl >= 1) && (zahl <= 9)));
+		zahlString = "" + zahl;
+
+		System.out.println(zahlString);
+		for (int i = 1; i <= 10; i++) {
+			zahlString = umwandlung(zahlString);
+			System.out.println(zahlString);
+			
+			s.close();
+		}
+	}
+}

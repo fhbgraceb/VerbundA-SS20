@@ -1,0 +1,44 @@
+package zweiteHausuebung.Schleifen;
+
+import java.util.Scanner;
+
+public class k_ZweierPotenz {
+	/*
+	Aufgabe:
+	11.Zweierpotenz: Schreiben Sie ein Programm, 
+	das eine natürliche Zahl einliest und die größte Zweierpotenz ausgibt, 
+	die die eingelesene Zahl teilt.
+	Eingabe Ausgabe
+	17		1
+	48		16
+	1024	1024
+	*/
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int zahl;
+		int teiler;
+
+		System.out.print("Bitte Zahl eingeben: ");
+		zahl = s.nextInt();
+		
+		teiler = zweierPotenz(zahl);
+		
+		System.out.println("Die größte Zweierpotenz von " + zahl + " ist: " + teiler);
+		
+		s.close();
+	}
+	
+	public static int zweierPotenz (int number){
+		int teiler;
+		
+		teiler = 1;
+		while (number % teiler == 0)
+		{
+			teiler *= 2;
+		}
+		teiler /= 2;
+		
+		return teiler;
+	}
+
+}

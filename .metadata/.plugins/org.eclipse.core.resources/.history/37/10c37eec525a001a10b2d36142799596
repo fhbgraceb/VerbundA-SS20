@@ -1,0 +1,40 @@
+package dritteEinheit;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Zufall {
+
+	public static void main(String[] args) {
+		
+		int zufallszahl=0;
+		String pwd="";
+		
+		for (int i = 0; i < 9; i++) {
+			int zufallszahl = ThreadLocalRandom.current().nextInt(20, 100);
+			
+			pwd=pwd + (char) zufallszahl;
+		}
+		
+//		for (int i = 20; i <= 100; i++) {
+//			for (int i = 20; i <= 100; i++) {
+//				for (int i = 20; i <= 100; i++) {
+//					for (int i = 20; i <= 100; i++) {
+//						for (int i = 20; i <= 100; i++) {
+//							for (int i = 20; i <= 100; i++) {
+//								for (int i = 20; i <= 100; i++) {
+//									for (int i = 20; i <= 100; i++) {
+//										//bekomme ich zahlen von 0-100
+//										
+//									}
+//								}
+//							}
+//						}
+//					}
+//				}
+//			}
+//		}
+		
+		System.out.println("ihr pw" + pwd);
+	}
+
+}

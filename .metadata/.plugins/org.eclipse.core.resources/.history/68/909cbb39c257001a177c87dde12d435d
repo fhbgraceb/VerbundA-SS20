@@ -1,0 +1,10 @@
+package zweiteHausuebung.Schleifen;
+
+public class c_Ziffernsumme {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

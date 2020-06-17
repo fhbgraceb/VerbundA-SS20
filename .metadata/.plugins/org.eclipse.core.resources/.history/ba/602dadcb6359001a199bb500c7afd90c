@@ -1,0 +1,18 @@
+package zweiteHausuebung.WennUnterprogramme;
+
+public class a_Notenberechnung {
+	/*
+	 Aufgabe:
+	 1.Notenberechngung:Prüfungspunkte und Mitarbeitspunkte werden gemeinsam in einer Methode übergeben, 
+	 z.B.: noteermitteln(40,23); die Prüfung muss jedoch positiv sein d.h. größer 35 Punkte, 
+	 51 Punkte im Summe genügen nicht z.B.: Prüfung 30, Mitarbeitspunkte 30 ergeben aufgrund des K.O. 
+	 -Kriteriums dennoch ein nicht genügend. Zurück gegeben wir die Note. 
+	 Geben Sie zumindest 3 Testfälle aus, 
+	 d.h. 3 Methodenaufrufe mit unterschiedlichen Anwendungs-/Verzweigungsfall. Notenschlüssel der FH entsprechend.
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

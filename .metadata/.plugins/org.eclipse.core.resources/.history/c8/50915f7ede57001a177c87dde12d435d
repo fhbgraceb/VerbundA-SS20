@@ -1,0 +1,17 @@
+package zweiteHausuebung.WennUnterprogramme;
+
+public class e_Taschenrecher2 {
+	/*
+	 Aufgabe:
+	 5.Taschenrechner2: Adaption von Taschenrechner I, beim Programmstart wird Ihnen ein Menü angezeigt.
+	1.) Addieren
+	2.) Multiplizieren usw.
+	danach übergeben Sie die bestimmte Nummer z.B.: „1“ 
+	und werden anschließend um zwei Zahlen gebeten, das Ergebnis wird anschließend ausgegeben
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

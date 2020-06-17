@@ -1,0 +1,37 @@
+package zweiteHausuebung.WennUnterprogramme;
+
+import java.util.Scanner;
+
+public class b_Dreieck {
+	/*
+	 Aufgabe:
+	 2.Dreieck: Es werden 3 Zahlenwerte übergeben, entweder direkt (erstzahl = 5) oder via Scanner, 
+	 und als Resultat erfahren Sie via Konsole ob es sich hierbei um (k)ein (gleichschenkliges) Dreieck handelt. 
+	 Bevor auf „Gleichschenkligkeit“ geprüft wird, sowohl vorab überprüft werden, 
+	 ob es sich überhaupt um ein Dreieck handelt, sollte dies nicht der Fall sein, 
+	 soll die Folgeüberprüfung nicht stattfinden(Performance) und der entsprechende Status ausgegeben werden 
+	 z.B.: Es handelt sich um ein: kein Dreieck, ein Dreieck aber kein Gleichschenkeliges, ein gleichschenkeliges Dreieck .
+	 */
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		
+		System.out.println("Bitte länge von der der Seite a eingeben: ");
+		double a=s.nextDouble();
+		System.out.println("Bitte länge von der der Seite b eingeben: ");
+		double b=s.nextDouble();
+		System.out.println("Bitte länge von der der Seite c eingeben: ");
+		double c=s.nextDouble();
+		
+		if ((a + b > c) && (a + c > b) && (b + c > a) &&
+				(a > 0) && (b > 0) && (c > 0)) {
+			if ((a==b)||(b==c)||(a==c) ) {
+				System.out.println("ein gleichschenkeliges Dreieck");
+			}else {
+				System.out.println("ein Dreieck aber kein gleichschenkeliges Dreieck");
+			}
+		}else {
+			System.out.println("kein Dreieck");
+		}
+	}
+
+}

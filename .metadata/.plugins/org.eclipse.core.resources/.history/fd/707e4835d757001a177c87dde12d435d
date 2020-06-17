@@ -1,0 +1,10 @@
+package zweiteHausuebung.Schleifen;
+
+public class i_NHochN {
+	/*
+	Aufgabe:
+	9.NMalN: Lesen Sie eine Zahl (n) ein 
+	und berechnen Sie mit einer Schleife:
+	1 * n + 2 * n + 3 * n + ... + n * n
+	*/
+}
