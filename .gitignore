@@ -2,6 +2,8 @@
 
 .metadata/
 
+*.ini
+
 .metadata/.lock
 
 .metadata/.log
