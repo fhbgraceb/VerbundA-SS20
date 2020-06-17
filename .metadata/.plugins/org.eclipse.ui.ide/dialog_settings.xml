@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExternalProjectImportWizard">
-		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
 			<item value="C:\Users\dbernal\tmp\Dropbox\uni Stuff\PIT\2.semester\Programmieren\eclipse-workspace\LocalDropboxSpace"/>
 			<item value="C:\Users\dbernal\tmp\Dropbox\uni Stuff\PIT\2.semester\Programmieren\eclipse-workspace\GrundlagenProgrammieren"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\VerbundA-SS20"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\GIT\gl-prog-ss2020"/>
-			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\GL Prog 2020 - Kapitel J - Java-Kurzinfo - Codebeispiele (Project).zip"/>
+			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\Codebeispiele(Projekt).zip"/>
 			<item value=""/>
 			<item value="C:\Users\dbernal\tmp\WHOLEWORKSPACE_March3BackUP.zip"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\ErsteEinheit.zip"/>
@@ -35,6 +37,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\dbernal\tmp\GIT_Hajer"/>
 			<item value="C:\Users\dbernal\tmp\Dropbox\uni Stuff\PIT\2.semester\Programmieren\eclipse-workspace\Hausübungen"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\GIT\gl-prog-ubungen-ss2020"/>
 			<item value="C:\Users\dbernal\tmp\_Drive\_FH-BFI-PIT\PROG20-Grundlagen der Programmierung\Aufgaben_docs\Aufgabe3\3Hü"/>
