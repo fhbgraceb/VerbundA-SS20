@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;bernalPractice.htvz_Vorkommen&apos; to &apos;htvz_A4Vorkommen&apos;&#x0D;&#x0A;- Original project: &apos;GL-PROG-SS-2020-ÜBUNGEN&apos;&#x0D;&#x0A;- Original element: &apos;bernalPractice.htvz_Vorkommen&apos;&#x0D;&#x0A;- Renamed element: &apos;bernalPractice.htvz_A4Vorkommen&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;htvz_Vorkommen&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;bernalPractice{htvz_Vorkommen.java[htvz_Vorkommen" matchStrategy="1" name="htvz_A4Vorkommen" qualified="false" references="true" similarDeclarations="false" stamp="1591990286325" textual="false" version="1.0"/>
-</session>

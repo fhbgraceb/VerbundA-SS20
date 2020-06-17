@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete 4 elements from project &apos;GL-PROG-SS-2020-ÜBUNGEN&apos;&#x0D;&#x0A;- Original project: &apos;GL-PROG-SS-2020-ÜBUNGEN&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     GL-PROG-SS-2020-ÜBUNGEN/hausuebung1&#x0D;&#x0A;     GL-PROG-SS-2020-ÜBUNGEN/hausuebung2.aSchleifen&#x0D;&#x0A;     GL-PROG-SS-2020-ÜBUNGEN/hausuebung2.bIFUnterprogramm&#x0D;&#x0A;     GL-PROG-SS-2020-ÜBUNGEN/hausuebung3" description="Delete elements" element1="/&lt;hausuebung3" element2="/&lt;hausuebung2.bIFUnterprogramm" element3="/&lt;hausuebung2" element4="/&lt;hausuebung2.aSchleifen" element5="/&lt;hausuebung1" elements="5" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1584717248702" subPackages="false" version="1.0"/>
-</session>
