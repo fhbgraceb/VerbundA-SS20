@@ -2,6 +2,10 @@
 
 .metadata/
 
+/.metadata/*
+
+/.metadata
+
 *.ini
 
 .metadata/.lock
