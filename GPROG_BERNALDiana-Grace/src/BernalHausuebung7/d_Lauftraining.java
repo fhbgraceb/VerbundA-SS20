@@ -1,203 +1,153 @@
 package BernalHausuebung7;
 
 public class d_Lauftraining {
-/*	Erstellen Sie ein 2-dimensionales Array, in dem die tägliche Laufleistung für ein Jahr gespeichert werden kann. 
-	Füllen Sie dieses Array mit Zufallszahlen von 0 bis 25.
- *  Beachten Sie, dass die Monate verschieden viele Tage haben und passen Sie das Array dementsprechend an. Ignorieren Sie dabei, dass es auch Schaltjahre gibt.
-	Geben Sie dann die folgenden Informationen aus:
-	- An welchem Tag (Monatsname und Tag) wurde die längste Strecke gelaufen?
-	- Eine Statistik der Monate mit der in dem jeweiligen Monat gelaufenen Strecke.
-	- Eine Statistik der Tage im Monat (1., 2., 3., …):
-	- Wie weit wurde an diesen Tagen jeweils im Schnitt gelaufen?
-	- An welchen 5 aufeinander folgenden Tagen wurde in Summe die geringste Strecke zurückgelegt?
- */
+	/*
+	 * Erstellen Sie ein 2-dimensionales Array, in dem die tägliche Laufleistung für
+	 * ein Jahr gespeichert werden kann. Füllen Sie dieses Array mit Zufallszahlen
+	 * von 0 bis 25. Beachten Sie, dass die Monate verschieden viele Tage haben und
+	 * passen Sie das Array dementsprechend an. Ignorieren Sie dabei, dass es auch
+	 * Schaltjahre gibt. Geben Sie dann die folgenden Informationen aus: - An
+	 * welchem Tag (Monatsname und Tag) wurde die längste Strecke gelaufen? - Eine
+	 * Statistik der Monate mit der in dem jeweiligen Monat gelaufenen Strecke. -
+	 * Eine Statistik der Tage im Monat (1., 2., 3., …): - Wie weit wurde an diesen
+	 * Tagen jeweils im Schnitt gelaufen? - An welchen 5 aufeinander folgenden Tagen
+	 * wurde in Summe die geringste Strecke zurückgelegt?
+	 */
 
 	public static void main(String[] args) {
 		final double maximalDistanz = 25;
-		String[] monate = new String[]{"Jaenner", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"};
-		int tageImMonat[] = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		/*
-		 * Zunächst einmal Platz für die Monate schaffen.
-		 * double wird verwendet um beliebige Distanzen speichern zu k�nnen
-		 */
-		double[][] laufleistung = new double[monate.length][];
-		double tagesMaximum;
+		String[] monate = new String[] { "Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec." };
+		int tageImMonat[] = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+		double[][] laufLeistung = new double[monate.length][];
+		double tageMax;
 		double[] monatsLeistung = new double[monate.length];
-		
-		// Dann für die entsprechende Anzahl an Tagen im Monat Platz schaffen
-		for (int i = 0; i < tageImMonat.length; i++)
-		{
-			laufleistung[i] = new double[tageImMonat[i]];
+
+		for (int i = 0; i < tageImMonat.length; i++) {
+			laufLeistung[i] = new double[tageImMonat[i]];
 		}
-		
-		/*
-		 *  Jetzt die Laufleistung eintragen
-		 *  Dabei wird auf 10 Meter gerundet (Fleissaufgabe des Programnmierers)
-		 */
-		for (int monat = 0; monat < laufleistung.length; monat++)
-		{
-			for (int tag = 0; tag < tageImMonat[monat]; tag++)
-			{
-				// Zun�chst die Strecke in Metern berechnen
-				int strecke = (int)(Math.random() * ((maximalDistanz * 1000) - 0 + 1));
-				// Auf 10 Meter runden
-				strecke = strecke / 10 * 10;
-				// In km umrechnen (aufpassen auf double!) und im Array eintragen
-				laufleistung[monat][tag] = strecke / 1000.0;
+
+		for (int monat = 0; monat < laufLeistung.length; monat++) {
+			for (int tag = 0; tag < tageImMonat[monat]; tag++) {
+				int strecke = (int) (Math.random() * ((maximalDistanz * 1000) - 0 + 1)); //meter runden
+				strecke = strecke / 10 * 10; //km
+				laufLeistung[monat][tag] = strecke / 1000.0;
 			}
 		}
 
 		// Ausgabe der Laufleistung
 		System.out.printf("%-12s : ", "Monat");
-		for (int i = 1; i <= 31; i++)
-		{
+		for (int i = 1; i <= 31; i++) {
 			System.out.printf(" %2d.  ", i);
 		}
 		System.out.println();
-		for (int monat = 0; monat < laufleistung.length; monat++)
-		{
+		for (int monat = 0; monat < laufLeistung.length; monat++) {
 			System.out.printf("%-12s : ", monate[monat]);
-			for (int tag = 0; tag < tageImMonat[monat]; tag++)
-			{
-				System.out.printf("%5.2f ", laufleistung[monat][tag]);
+			for (int tag = 0; tag < tageImMonat[monat]; tag++) {
+				System.out.printf("%5.2f ", laufLeistung[monat][tag]);
 			}
 			System.out.println();
 		}
-		
+
 		/*
-		 * Es kann mehrere Tage mit derselben Laufleistung geben.
-		 * Deshalb erfolgt die Berechnung in zwei Schritten:
-		 * 
-		 * 1. Berechnung der maximalen Laufleistung
-		 * 2. Ausgabe derjenigen Tage, an denen diese Strecke gelaufen wurde 
+		 * 1. maximalen Laufleistung 
+		 * 2. Ausgabe derjenigen Tage, an denen diese gelaufen wurde
 		 */
-		tagesMaximum = 0;
-		for (int monat = 0; monat < laufleistung.length; monat++)
-		{
-			for (int tag = 0; tag < tageImMonat[monat]; tag++)
-			{
-				if (laufleistung[monat][tag] > tagesMaximum)
-				{
-					tagesMaximum = laufleistung[monat][tag];
+		tageMax = 0;
+		for (int monat = 0; monat < laufLeistung.length; monat++) {
+			for (int tag = 0; tag < tageImMonat[monat]; tag++) {
+				if (laufLeistung[monat][tag] > tageMax) {
+					tageMax = laufLeistung[monat][tag];
 				}
 			}
 		}
 		System.out.println();
-		System.out.println("Tagesmaximum ist: " + tagesMaximum);
-		System.out.println("Es wurde gelaufen an den folgenden Tagen:");
-		for (int monat = 0; monat < laufleistung.length; monat++)
-		{
-			for (int tag = 0; tag < tageImMonat[monat]; tag++)
-			{
-				if (laufleistung[monat][tag] == tagesMaximum)
-				{
+		System.out.println("Tages Maximum: " + tageMax);
+		System.out.println("An den folgenden Tagen wurde gelaufen:");
+		for (int monat = 0; monat < laufLeistung.length; monat++) {
+			for (int tag = 0; tag < tageImMonat[monat]; tag++) {
+				if (laufLeistung[monat][tag] == tageMax) {
 					System.out.println(tag + 1 + ". " + monate[monat]);
 				}
 			}
 		}
 		System.out.println();
-		
-		// Monatsleistung berechnen
-		System.out.println("Die Laufleistung der einzelnen Monate:");
-		for (int monat = 0; monat < laufleistung.length; monat++)
-		{
+
+		/*----------------------------------------Monatsleistung----------------------------------------*/
+		System.out.println("Laufleistung der Monate:");
+		for (int monat = 0; monat < laufLeistung.length; monat++) {
 			double summe = 0;
-			for (int tag = 0; tag < tageImMonat[monat]; tag++)
-			{
-				summe += laufleistung[monat][tag];
+			for (int tag = 0; tag < tageImMonat[monat]; tag++) {
+				summe += laufLeistung[monat][tag];
 			}
 			monatsLeistung[monat] = summe;
 			System.out.printf("%-12s : %5.2f\n", monate[monat], monatsLeistung[monat]);
 		}
-		
-		/*
-		 *  Tagesleistung berechnen
-		 *  Dazu alle möglichen Tage durchgehen
-		 */
+
+		/*----------------------------------------Tage durchgehen----------------------------------------*/
 		System.out.println();
 		System.out.println("Wie weit wurde an den Tagen im Schnitt gelaufen?");
-		for (int tag = 0; tag <= 30; tag++){
+		for (int tag = 0; tag <= 30; tag++) {
 			double summe = 0;
 			int anzahl = 0;
-			// Nun alle Monate durchgehen
-			for (int monat = 0; monat < laufleistung.length; monat++)
-			{
-				/*
-				 *  Achtung: Gibt es den Tag im Monat?
-				 *  Im Februar gibt es nur 28 Tage, im April nur 30, ... 
-				 */
-				if (tag < tageImMonat[monat])
-				{
-					summe += laufleistung[monat][tag];
+			/*----------------------------------------Monate durchgehen----------------------------------------*/
+			for (int monat = 0; monat < laufLeistung.length; monat++) {
+				/*-gibt es es den Tag im Monat (ungleich)-*/
+				if (tag < tageImMonat[monat]) {
+					summe += laufLeistung[monat][tag];
 					anzahl++;
 				}
 			}
 			System.out.printf("%2d. (%2d Tage): %5.2f\n", tag + 1, anzahl, summe / anzahl);
 		}
-		
-		final int anzahlTage = 5;		// Länge der Periode
-		double minimaleStrecke = maximalDistanz * anzahlTage;		// minimale Distanz - muss auf einen großen Wert gesetzt werden
-		double aktuelleStrecke = 0;		// Distanz der aktullen Periode
-		int minVonTag = 0;				// Beginn und Ende der Periode mit minimalem Wert
+
+		final int anzahlTage = 5; //Periode
+		double minStrecke = maximalDistanz * anzahlTage; 
+		double aktStrecke = 0; // distanz der aktullen Periode
+		int minVonTag = 0; 
 		int minVonMonat = 0;
 		int minBisTag = 0;
 		int minBisMonat = 0;
-		int[] inSummeTag = new int[anzahlTage];		// Welche Tage sind bei der aktuellen Periode dabei
-		int[] inSummeMonat = new int[anzahlTage];
-		int index = 0;								// welcher Tag der Periode wird "ausgetauscht"
-		int soVieleDa = 0;				// Wie viel Tage sind schon in der Summe enthalten?
-		boolean alleDa = false;			// Sind schon 5 Tage in der Summe enthalten?
-		for (int monat = 0; monat < laufleistung.length; monat++)
-		{
-			for (int tag = 0; tag < tageImMonat[monat]; tag++)
-			{
-				if (alleDa)
-				{
-					aktuelleStrecke -= laufleistung[inSummeMonat[index]][inSummeTag[index]];
-				}
-				else
-				{
+		int[] sumTag = new int[anzahlTage]; 
+		int[] sumMonat = new int[anzahlTage];
+		int index = 0; 
+		int soVieleDa = 0;
+		boolean alleDa = false; // schon 5 Tage in Summe?
+		for (int monat = 0; monat < laufLeistung.length; monat++) {
+			for (int tag = 0; tag < tageImMonat[monat]; tag++) {
+				if (alleDa) {
+					aktStrecke -= laufLeistung[sumMonat[index]][sumTag[index]];
+				} else {
 					soVieleDa++;
-					if (soVieleDa == anzahlTage)
-					{
+					if (soVieleDa == anzahlTage) {
 						alleDa = true;
 					}
 				}
-				aktuelleStrecke += laufleistung[monat][tag];
-				inSummeTag[index] = tag;
-				inSummeMonat[index] = monat;
-				if (alleDa)
-				{
-					if (aktuelleStrecke < minimaleStrecke)
-					{
-						minimaleStrecke = aktuelleStrecke;
+				aktStrecke += laufLeistung[monat][tag];
+				sumTag[index] = tag;
+				sumMonat[index] = monat;
+				if (alleDa) {
+					if (aktStrecke < minStrecke) {
+						minStrecke = aktStrecke;
 						minBisTag = tag;
 						minBisMonat = monat;
-						if (index < anzahlTage - 1)
-						{
-							minVonTag = inSummeTag[index + 1];
-							minVonMonat = inSummeMonat[index + 1];
-						}
-						else
-						{
-							minVonTag = inSummeTag[0];
-							minVonMonat = inSummeMonat[0];
+						if (index < anzahlTage - 1) {
+							minVonTag = sumTag[index + 1];
+							minVonMonat = sumMonat[index + 1];
+						} else {
+							minVonTag = sumTag[0];
+							minVonMonat = sumMonat[0];
 						}
 					}
 				}
 				index++;
-				if (index >= anzahlTage)
-				{
+				if (index >= anzahlTage) {
 					index = 0;
 				}
 			}
 		}
 		System.out.println();
-		System.out.printf("Die minimale Laufleistung an %d aufeinander folgenden Tagen beträgt: %6.2f\n", 
-													anzahlTage, 							minimaleStrecke);
-		System.out.printf("Sie wurde gelaufen vom %d. %s bis zum %d. %s.\n", 
-					minVonTag + 1, monate[minVonMonat], minBisTag + 1, monate[minBisMonat]);
-
+		System.out.printf("minimale Laufleistung an %d aufeinander folgenden Tagen ist: %6.2f\n", anzahlTage, minStrecke);
+		System.out.printf("diese wurde gelaufen vom %d. %s bis zum %d. %s", minVonTag + 1, monate[minVonMonat], minBisTag + 1, monate[minBisMonat]);
 	}
-
 }

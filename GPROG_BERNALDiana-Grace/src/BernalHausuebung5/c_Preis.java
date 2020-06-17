@@ -26,7 +26,7 @@ public class c_Preis {
 		for (int i = 0; i < anzahl; i++) {
 			System.out.print("Artikelpreis von Artikel "+(i+1)+" eingeben: ");
 			preis = s.nextDouble();
-			System.out.print("MwSt % von Artikel "+anzahl+" eingeben: ");
+			System.out.print("MwSt % von Artikel "+(i+1)+" eingeben: ");
 			mwSt = s.nextDouble();
 			
 			zwischenpreis = preis(preis, anzahl, mwSt);

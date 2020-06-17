@@ -21,7 +21,7 @@ public class f_WuerfelStatistikArray {
 		
 		for (int i = 0; i < stat.length; i++)
 		{
-			System.out.printf("Anyahl der %d: %d\n", i + 1, stat[i]);
+			System.out.printf("Anzahl der %d: %d\n", i + 1, stat[i]);
 		}
 	}
 

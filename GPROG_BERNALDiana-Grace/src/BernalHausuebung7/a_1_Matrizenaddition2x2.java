@@ -11,74 +11,66 @@ public class a_1_Matrizenaddition2x2 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		
-		int[][] a = new int[2][2];
-		int[][] b = new int[2][2];
-		int[][] c = new int[2][2];
+		int[][] eins = new int[2][2];
+		int[][] zwei = new int[2][2];
+		int[][] drei = new int[2][2];
 		
-		System.out.println("Eingabe von Matrix A:");
-		for (int i = 0; i < a.length; i++)
+		System.out.println("Erste Matrix eingeben: ");
+		for (int i = 0; i < eins.length; i++)
 		{
-			for (int j = 0; j < a[i].length; j++)
+			for (int j = 0; j < eins[i].length; j++)
 			{
-				System.out.print("Bitte a[" + i + "][" + j + "] eingeben: ");
-				a[i][j] = s.nextInt();
+				System.out.print("eins[" + i + "][" + j + "] eingeben: ");
+				eins[i][j] = s.nextInt();
 			}
 		}
 
-		System.out.println();
-		System.out.println("Eingabe von Matrix B:");
-		for (int i = 0; i < b.length; i++)
+		System.out.println("\nZweite Matrix eingeben:");
+		for (int i = 0; i < zwei.length; i++)
 		{
-			for (int j = 0; j < b[i].length; j++)
+			for (int j = 0; j < zwei[i].length; j++)
 			{
-				System.out.print("Bitte b[" + i + "][" + j + "] eingeben: ");
-				b[i][j] = s.nextInt();
+				System.out.print("zwei[" + i + "][" + j + "] eingeben: ");
+				zwei[i][j] = s.nextInt();
 			}
 		}
 
-		/* 
-		 * Bei der Addition werden immer die an derselben Stelle liegenden Elemente addiert.
-		 */
-		for (int i = 0; i < c.length; i++)
+		for (int i = 0; i < drei.length; i++)
 		{
-			for (int j = 0; j < c[i].length; j++)
+			for (int j = 0; j < drei[i].length; j++)
 			{
-				c[i][j] = a[i][j] + b[i][j];
+				drei[i][j] = eins[i][j] + zwei[i][j];
 			}
 		}
 
-		System.out.println();
-		System.out.println("Matrix A: ");
-		System.out.println("----------");
-		for (int i = 0; i < a.length; i++)
+		System.out.println("\n=============\nMatrix eins:");
+		for (int i = 0; i < eins.length; i++)
 		{
-			for (int j = 0; j < a[i].length; j++)
+			for (int j = 0; j < eins[i].length; j++)
 			{
-				System.out.print(a[i][j] + " ");
+				System.out.print(eins[i][j] + " ");
 			}
 			System.out.println();
 		}
 
 		System.out.println();
-		System.out.println("Matrix B: ");
-		System.out.println("----------");
-		for (int i = 0; i < b.length; i++)
+		System.out.println("=============\nMatrix zwei:");
+		for (int i = 0; i < zwei.length; i++)
 		{
-			for (int j = 0; j < b[i].length; j++)
+			for (int j = 0; j < zwei[i].length; j++)
 			{
-				System.out.print(b[i][j] + " ");
+				System.out.print(zwei[i][j] + " ");
 			}
 			System.out.println();
 		}
 
 		System.out.println();
-		System.out.println("Matrix C =  A + B:");
-		System.out.println("-------------------");
-		for (int i = 0; i < c.length; i++)
+		System.out.println("===================\nMatrix C =  A + B:");
+		for (int i = 0; i < drei.length; i++)
 		{
-			for (int j = 0; j < c[i].length; j++)
+			for (int j = 0; j < drei[i].length; j++)
 			{
-				System.out.print(c[i][j] + " ");
+				System.out.print(drei[i][j] + " ");
 			}
 			System.out.println();
 		}
