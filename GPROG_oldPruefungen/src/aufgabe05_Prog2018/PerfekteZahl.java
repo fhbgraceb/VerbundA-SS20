@@ -1,0 +1,88 @@
+package aufgabe05_Prog2018;
+
+import java.util.Scanner;
+
+/*
+ * PerfekteZahl: 
+ * 
+ * Eine Zahl heißt perfekt, wenn 
+ * 	die Summe ihrer echten Teiler 
+ *      (das sind alle Teiler, die kleiner als die Zahl selbst sind) 
+ * 	gleich groß ist, wie die Zahl. 
+ *	Zum Beispiel ist 6 eine perfekte Zahl, 
+ *      da 1, 2 und 3 die echten Teiler von 6 sind und 1+2+3=6 gilt. 
+ * Falls die Summe der echten Teiler kleiner ist als die Zahl, 
+ * 	heißt die Zahl defizient. 
+ * Falls die Summe der echten Teiler größer ist als die Zahl, 
+ * 	heißt die Zahl abundant. 
+ * Schreiben Sie ein Programm, das eine natürliche Zahl einliest und ausgibt, 
+ * 	ob die eingelesene Zahl perfekt, defizient oder abundant ist.
+ * 
+ * Eingabe 	Ausgabe 	Begründung 
+ * 	5		defizient 	1 ist einziger echter Teiler 
+ * 	6 		perfekt 	1+2+3=6 
+ * 12 		abundant 	1+2+3+4+6=16>12 
+ */
+/*
+ * In dieser Version wird als Fleissaufgabe auch die Erklärung ausgegeben.
+ */
+public class PerfekteZahl 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		int zahl;
+		int teilerSumme;
+		String eigenschaft;
+		String teilerString;
+		String vergleich;
+		
+		System.out.print("Bitte geben Sie eine Zahl ein: ");
+		zahl = s.nextInt();
+		
+		teilerSumme = 0;
+		teilerString = "";
+		// Nun werden alle Zahlen, die kleiner als die einegebene Zahl sind ...
+		for (int teiler = 1; teiler < zahl; teiler++)
+		{
+			// ... Überprüft, ob sie die eingegebene Zahl teilen.
+			if (zahl % teiler == 0)
+			{
+				// Falls es wirklich ein Teiler ist, wird er zur Summe addiert.
+				teilerSumme += teiler;
+				// Kein "+" vor dem ersten Summanden
+				if (! teilerString.equals(""))
+				{
+					teilerString += " + ";
+				}
+				teilerString += teiler;
+			}
+		}
+		
+		/*
+		 *  Um sicher immer denselben Satz auszugeben
+		 *  wird dieser erst nach dem if ausgegeben und die Eigenschaft
+		 *  und der Vergleich in eigenen Variablen gespeichert. 
+		 */
+		if (teilerSumme < zahl)
+		{
+			eigenschaft = "defizient";
+			vergleich = ">";
+		} 
+		else if (teilerSumme > zahl)
+		{
+			eigenschaft = "abundant";
+			vergleich = "<";
+		}
+		else	// teilerSumme == zahl - alle anderen Möglichkieten wurden bereits überprüft
+		{
+			eigenschaft = "perfekt";
+			vergleich = "=";
+		}
+		
+		System.out.println("Die Zahl " + zahl + " ist " + eigenschaft + ".");
+		System.out.println("Erklärung: " + zahl + " (Zahl) " + vergleich + " " + teilerSumme + " (Summe der Teiler = " + teilerString +")");
+	}
+
+}
