@@ -8,7 +8,7 @@ public class NurBuchstaben
 Beipiel:
 Eingabe: 	"Wort", "Küche", "C3-PO", "Bond, James Bond", "Java", "Das Boot"
 Ausgabe:	2
-
+# nur echte buchstaben string array
 	* */
 	public static void main(String[] args) 
 	{

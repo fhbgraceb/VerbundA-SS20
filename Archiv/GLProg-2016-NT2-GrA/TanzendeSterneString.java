@@ -13,7 +13,7 @@ Dann muss der
 •	dritte Tanz Walzer, Jive, Polka oder  Salsa
 sein.
 Wie viele Möglichkeiten gibt es, ein Programm zusammenzustellen?
-
+# bruteforce string
 	* */
 
 	public static void main(String[] args) 

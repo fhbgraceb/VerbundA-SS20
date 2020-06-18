@@ -2,14 +2,16 @@ package _glProg_MP_1;
 
 /*
  * Auf einem Tisch stehen in einer 6x6 Matrix angeordnet Schachteln mit jeweils 3 Pralinen. 
- * 4 FreundInnen  (Jasmin, Michi, Andi und Joe) würfeln nun reihum mit zwei Würfeln, 
- * wobei der erste Würfel die Zeile der zweite Würfel die Spalte der Matrix angibt. 
+ * 4 FreundInnen  (Jasmin, Michi, Andi und Joe) wï¿½rfeln nun reihum mit zwei Wï¿½rfeln, 
+ * wobei der erste Wï¿½rfel die Zeile der zweite Wï¿½rfel die Spalte der Matrix angibt. 
  * Falls sich in der entsprechenden Schachtel noch Pralinen befinden, darf die Person eine davon essen.
  * 
  * Sobald alle Schachteln leer sind ist das Spiel beendet.
  * 
- * Simulieren Sie dieses Spiel und geben Sie anschließend aus wie viele Pralinen jede der FreundInnen gegessen hat.
- */
+ * Simulieren Sie dieses Spiel und geben Sie anschlieï¿½end aus wie viele Pralinen jede der FreundInnen gegessen hat.
+
+ * #array spiel ZÃ¼ger wurf random
+ * */
 
 public class Pralinen 
 {
@@ -49,7 +51,7 @@ public class Pralinen
 					volleSchachteln--;
 				}
 			}
-			wurfelt = (wurfelt + 1) % personen.length;	// dann kommt die nächste Person dran
+			wurfelt = (wurfelt + 1) % personen.length;	// dann kommt die nï¿½chste Person dran
 		}
 		
 		System.out.println("Anzahl der gegessenen Pralinen:");

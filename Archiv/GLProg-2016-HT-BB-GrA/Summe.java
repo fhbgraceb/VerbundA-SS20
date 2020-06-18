@@ -5,7 +5,7 @@ public class Summe
 /*
 Ab dem wievielten Glied ist die (Summe der) folgenden Reihe größer als 1234?
 1/4 + 1/5 + 1/6 + 7/2 + 8/2 + 9/2 + 3/10 + 3/11 + 3/12 + 13/4 …
-
+# reihe glied summe
 * */
 	public static void main(String[] args) 
 	{

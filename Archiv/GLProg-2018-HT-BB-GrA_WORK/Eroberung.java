@@ -13,7 +13,7 @@ Ist das gewählte Feld bereits im Besitz einer anderen Person, so gibt es zwei M
 SiegerIn des Spieles ist, wer zuerst in einer Reihe oder in einer Spalte 4 Felder in „erobert“ hat.
 * Dabei müssen diese Felder nicht nebeneinander liegen.
 Simulieren Sie obiges Spiel für Peter, Maria, Angelika und Mario und geben Sie den Sieger/die Siegerin aus.
-
+#2darray
 	* */
 
 	public static void main(String[] args) 

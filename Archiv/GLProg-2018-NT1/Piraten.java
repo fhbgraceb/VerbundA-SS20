@@ -11,7 +11,7 @@ Jeder von ihnen hat aber mehr als 25 Dublonen mitgebracht.
 Erstellen Sie ein Programm, das alle Möglichkeiten ausgibt,
 * wie viele Dublonen jeder der 3 erobert haben kann, wenn auch noch bekannt ist,
 * dass die drei insgesamt weniger als 200 Dublonen mitgebracht haben.
-
+#bruteforce
 	* */
 
 	public static void main(String[] args) 

@@ -5,6 +5,8 @@ public class Pi
 	/*
 	Der Wert der Zahl Pi kann durch die folgende Reihe annähernd berechnet werden.
 	Berechnen Sie das 125000. Glied der Reihe und geben Sie dann den angenäherten Wert für PI aus.
+
+	# pi reihe glieder formel
 	*/
 
 	public static void main(String[] args) 

@@ -30,7 +30,7 @@ Erklärung – ist vom Programm nicht auszugeben:
 Das erste Wort lautet CAZED, weil
 die erste Zeile der Zufallszahlen 3, 1, 26, 5, 4 ist und
 C der 3., A der 1., Z der 26., E der 5.und D der 4. Buchstabe des Alphabets ist.
-
+# buchstabe zahlen des alphabets
 	* */
 
 	public static void main(String[] args) 

@@ -1,10 +1,26 @@
 package _glProg_MP_2;
-
+/*
+Petra und Georg spielen auf einem quadratischen Spielbrett mit 25 Feldern (5 Zeilen, 5 Spalten) folgendes Spiel:
+Am Anfang des Spiels sind noch alle Felder frei.
+Die beiden haben jeweils 2 spezielle WÃ¼rfel, die fÃ¼nf Seiten mit den Augenzahlen von 1 bis 5 haben.
+Petra wÃ¼rfelt mit ihrem ersten WÃ¼rfel die Nummer einer Zeile und mit ihrem zweiten WÃ¼rfel die Nummer einer Spalte.
+Das so gewÃ¼rfelte Feld wird von ihr besetzt. Falls das gewÃ¼rfelte Feld bereits von Georg besetzt war,
+so hat es nun eine neue Besitzerin â€“ und Georg verliert das Feld.
+Danach wÃ¼rfelt Georg und verfÃ¤hrt dabei analog.
+Gewonnen hat, wer von den beiden zuerst 12 Felder im Besitz hat. Gewertet wird aber immer erst,
+wenn eine Runde abgeschlossen wurde, also kann das Spiel auch unentschieden ausgehen.
+Geben Sie aus, wer gewonnen hat und je Spieler die Anzahl der besetzten Felder.
+Die Ausgabe kÃ¶nnte etwa so aussehen:
+Petra: 12
+Georg: 12
+Das Spiel endet unentschieden
+#spiel array array2d
+* */
 /*
  * Nachdem bei diesem Spiel nur 2 Personen teilnehmen
  * wurde darauf verzichtet alle Daten (Namen, Anzahl, Augenzahl)
  * in Arrays zu speichern.
- * [Mit mehr als 2 SpielerInnen würde das Spiel (25 Felder, man braucht 12 für den Sieg)
+ * [Mit mehr als 2 SpielerInnen wï¿½rde das Spiel (25 Felder, man braucht 12 fï¿½r den Sieg)
  *  sehr wahrscheinlich nie enden.]
  */
 public class Besetzung {
@@ -13,16 +29,16 @@ public class Besetzung {
 	{
 		final int groesse = 5;
 		final int anzahlSieg = 12;
-		final int offset = 1;			// Unterschied zwischen den Würfelaugen und der Arrayposition
+		final int offset = 1;			// Unterschied zwischen den Wï¿½rfelaugen und der Arrayposition
 		final int petraMarke = 1;		// Damit markiert Petra "ihre" Felder
 		final int georgMarke = 2;
-		int spielfeld[][] = new int[groesse][groesse];	// Es wäre auch ein String-Array möglich, in das die Namen geschrieben werden.
+		int spielfeld[][] = new int[groesse][groesse];	// Es wï¿½re auch ein String-Array mï¿½glich, in das die Namen geschrieben werden.
 		int petraAnzahl = 0;			// Besetzte Felder
 		int georgAnzahl = 0;
-		int petraAugenZeile;			// Was wurde gewürfelt?
+		int petraAugenZeile;			// Was wurde gewï¿½rfelt?
 		int petraAugenSpalte;
 		int georgAugenZeile;			// Nachdem in der Angabe steht, dass jedeR eigene
-		int georgAugenSpalte;			// Würfel hat, ist dies auch hier so ;-)
+		int georgAugenSpalte;			// Wï¿½rfel hat, ist dies auch hier so ;-)
 		
 		while ((petraAnzahl < anzahlSieg) && (georgAnzahl < anzahlSieg))
 		{
@@ -30,7 +46,7 @@ public class Besetzung {
 			 *  Um gleich die richtige Position im Array zu bekommen wird
 			 *  von den geworfenen Augen gleich 1 abgezogen.
 			 *  
-			 *  Genaugenommen könnte man gleich
+			 *  Genaugenommen kï¿½nnte man gleich
 			 *  	(int)(Math.random() * groesse)
 			 *  schreiben, so ist aber der Bezug zur Formel und zur Angabe besser ersichtlich.
 			 *  Intern wird der Ausdruck von Java sowieso dahingehend "optimiert".
@@ -51,10 +67,10 @@ public class Besetzung {
 				spielfeld[petraAugenZeile][petraAugenSpalte] = petraMarke;			// Petra besetzt das Feld, ...
 				petraAnzahl++;											// ... hat ein Feld mehr ...
 				georgAnzahl--;											// ... und Georg hat nun ein Feld weniger.
-			}			// Bei der 3. Möglichkeit - Petra hatte das Feld schon - ändert sich nichts, deshalb kein else
+			}			// Bei der 3. Mï¿½glichkeit - Petra hatte das Feld schon - ï¿½ndert sich nichts, deshalb kein else
 			
-			// Danach kommt Georg dran, bei ihm läuft alles genau umgekehrt ab
-			// Man könnte ihn auch mit denselben beiden Würfeln würfeln lassen.
+			// Danach kommt Georg dran, bei ihm lï¿½uft alles genau umgekehrt ab
+			// Man kï¿½nnte ihn auch mit denselben beiden Wï¿½rfeln wï¿½rfeln lassen.
 			if (spielfeld[georgAugenZeile][georgAugenSpalte] == 0)
 			{
 				spielfeld[georgAugenZeile][georgAugenSpalte] = georgMarke;

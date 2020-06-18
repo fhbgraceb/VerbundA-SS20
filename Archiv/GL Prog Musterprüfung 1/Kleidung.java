@@ -6,7 +6,7 @@ public class Kleidung
 grün und schwarz und 4 Paar Schuhe in den Farben schwarz, weiß, rot und blau.
 Wie viele Möglichkeiten gibt es die Kleidungsstücke zu kombinieren, sodass er eine Jacke,
 eine Hose und ein Paar Schuhe anhat, aber die Kleidungsstücke alle eine andere Farbe haben?
-
+# bruteforce array
 * */
 	public static void main(String[] args) 
 	{

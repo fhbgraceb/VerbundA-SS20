@@ -4,7 +4,7 @@ package _glProg_MP_1;
  * Worte   
  * 
  * Implementieren Sie ein Unterprogramm, an das ein Array von Strings
- *  – die Worte, bestehend nur aus Buchstaben - übergeben wird.
+ *  ï¿½ die Worte, bestehend nur aus Buchstaben - ï¿½bergeben wird.
  *  
  * Das Unterprogramm liefert einen String als Ergebnis, 
  * in dem alle Strings des Arrays, durch Leerzeichen getrennt, 
@@ -14,9 +14,9 @@ package _glProg_MP_1;
  * 
  * Beispiel:
  * 
- * Eingabe: „Das“, „ist“, „kein“, „langer“, „Satz“
- * Ausgabe: „aDs ist eikn aelngr aStz“
- * 
+ * Eingabe: ï¿½Dasï¿½, ï¿½istï¿½, ï¿½keinï¿½, ï¿½langerï¿½, ï¿½Satzï¿½
+ * Ausgabe: ï¿½aDs ist eikn aelngr aStzï¿½
+ * #vokale check array von string
  */
 public class VokaleVor 
 {
@@ -47,7 +47,7 @@ public class VokaleVor
 			{
 				// Buchstaben holen
 				buchstabe = wort.charAt(j);
-				// Buchstaben in Grossbuchtaben umwandeln um die Überprüfung zu erleichtern
+				// Buchstaben in Grossbuchtaben umwandeln um die ï¿½berprï¿½fung zu erleichtern
 				buchstabeGross = Character.toUpperCase(buchstabe);
 				
 				// Ist der Buchstabe ein Vokal? - Geht auch mit	if ("AEIOU".contains(String.valueOf(buchstabeGross))) // kommt der Buchstabe - in einen String umgewandelt - im String "AEIOU" vor?
