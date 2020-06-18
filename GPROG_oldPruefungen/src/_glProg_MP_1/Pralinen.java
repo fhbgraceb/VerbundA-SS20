@@ -11,51 +11,47 @@ package _glProg_MP_1;
  * Simulieren Sie dieses Spiel und geben Sie anschlieﬂend aus wie viele Pralinen jede der FreundInnen gegessen hat.
  */
 
-public class Pralinen 
-{
+public class Pralinen {
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		final int groesse = 6;
 		final int anfangPralinen = 3;
 		int[][] schachteln = new int[groesse][groesse];
-		int volleSchachteln = groesse * groesse;		// in wie vielen Schachteln ist noch etwas drinnen?
-		int wurfelt;
-		String personen[] = new String[]{"Jasmin", "Michi", "Andi", "Joe"};		// mitspielende Personen
-		int[] anzahlGegessen = new int[personen.length];		// anzahl der gegessenen Pralinen
+		int schachtelmitPraline = groesse * groesse; // in wie vielen Schachteln ist noch etwas drinnen?
+		int personwurfelt;
+		String spieler[] = new String[] { "Jasmin", "Michi", "Andi", "Joe" }; // mitspielende Personen
+		int[] anzahlGegessen = new int[spieler.length]; // anzahl der gegessenen Pralinen
 		int zeile;
 		int spalte;
-		
-		
-		for (int i = 0; i < schachteln.length; i++)
-		{
-			for (int j = 0; j < schachteln[i].length; j++)
-			{
+		// boolean gameon=false;
+
+		// zum bef¸llen der Prallinen
+		for (int i = 0; i < schachteln.length; i++) {
+			for (int j = 0; j < schachteln[i].length; j++) {
 				schachteln[i][j] = anfangPralinen;
 			}
 		}
-		
-		wurfelt = 0;		// Die erste Person kommt dran
-		while (volleSchachteln > 0)
-		{
-			zeile = (int)(Math.random() * ((groesse - 1) - 0 + 1) + 0);
-			spalte = (int)(Math.random() * ((groesse - 1) - 0 + 1) + 0);
-			if (schachteln[zeile][spalte] > 0)
-			{
-				schachteln[zeile][spalte]--;		// Praline aus der Schachtel nehmen
-				anzahlGegessen[wurfelt]++;					// und von der Person, die dran ist gegessen
-				if (schachteln[zeile][spalte] == 0)
-				{
-					volleSchachteln--;
+
+		// spiel beginnt
+		personwurfelt = 0; // Die erste Person kommt dran
+		while (schachtelmitPraline > 0) {
+			zeile = (int) (Math.random() * ((groesse - 1) - 0 + 1) + 0);
+			spalte = (int) (Math.random() * ((groesse - 1) - 0 + 1) + 0);
+			if (schachteln[zeile][spalte] > 0) {
+				schachteln[zeile][spalte]--; // Praline aus der Schachtel nehmen
+				anzahlGegessen[personwurfelt]++; // und von der Person, die dran ist gegessen
+
+				if (schachteln[zeile][spalte] == 0) { // wenn eine Schachtel leer ist, dann wird sie degrementiert
+					schachtelmitPraline--;
 				}
+
 			}
-			wurfelt = (wurfelt + 1) % personen.length;	// dann kommt die n‰chste Person dran
+			personwurfelt = (personwurfelt + 1) % spieler.length; // dann n‰chste Person
 		}
-		
-		System.out.println("Anzahl der gegessenen Pralinen:");
-		for (int i = 0; i < personen.length; i++)
-		{
-			System.out.printf("%-10s : %3d Pralinen\n", personen[i], anzahlGegessen[i]);
+
+		System.out.println("Soviele Pralinen wurden gegessen:");
+		for (int i = 0; i < spieler.length; i++) {
+			System.out.printf("%-10s : %3d Pralinen\n", spieler[i], anzahlGegessen[i]);
 		}
 	}
 

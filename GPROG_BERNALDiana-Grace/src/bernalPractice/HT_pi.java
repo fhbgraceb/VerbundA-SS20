@@ -1,6 +1,8 @@
-package _glProg_MP_1;
+package bernalPractice;
 
-public class Pi {
+import javax.sound.midi.Soundbank;
+
+public class HT_pi {
 
 	public static void main(String[] args) {
 		int anzahlGlieder = 125000;
@@ -19,7 +21,7 @@ public class Pi {
 
 		pi = reihe * 4 + 3;
 
-		System.out.println("PI: " + pi);
+		System.out.printf("PI ist %f", pi);
 	}
 
 }
