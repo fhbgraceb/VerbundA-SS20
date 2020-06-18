@@ -17,12 +17,12 @@ public class Pralinen
 	public static void main(String[] args) 
 	{
 		final int groesse = 6;
-		final int inhaltAnfang = 3;
+		final int anfangPralinen = 3;
 		int[][] schachteln = new int[groesse][groesse];
 		int volleSchachteln = groesse * groesse;		// in wie vielen Schachteln ist noch etwas drinnen?
 		int wurfelt;
 		String personen[] = new String[]{"Jasmin", "Michi", "Andi", "Joe"};		// mitspielende Personen
-		int[] anzahl = new int[personen.length];		// anzahl der gegessenen Pralinen
+		int[] anzahlGegessen = new int[personen.length];		// anzahl der gegessenen Pralinen
 		int zeile;
 		int spalte;
 		
@@ -31,7 +31,7 @@ public class Pralinen
 		{
 			for (int j = 0; j < schachteln[i].length; j++)
 			{
-				schachteln[i][j] = inhaltAnfang;
+				schachteln[i][j] = anfangPralinen;
 			}
 		}
 		
@@ -43,7 +43,7 @@ public class Pralinen
 			if (schachteln[zeile][spalte] > 0)
 			{
 				schachteln[zeile][spalte]--;		// Praline aus der Schachtel nehmen
-				anzahl[wurfelt]++;					// und von der Person, die dran ist gegessen
+				anzahlGegessen[wurfelt]++;					// und von der Person, die dran ist gegessen
 				if (schachteln[zeile][spalte] == 0)
 				{
 					volleSchachteln--;
@@ -55,7 +55,7 @@ public class Pralinen
 		System.out.println("Anzahl der gegessenen Pralinen:");
 		for (int i = 0; i < personen.length; i++)
 		{
-			System.out.printf(" * %-10s : %3d Pralinen\n", personen[i], anzahl[i]);
+			System.out.printf("%-10s : %3d Pralinen\n", personen[i], anzahlGegessen[i]);
 		}
 	}
 
