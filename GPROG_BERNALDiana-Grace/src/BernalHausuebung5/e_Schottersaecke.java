@@ -25,7 +25,7 @@ public class e_Schottersaecke {
 		
 		saecke = berechnungSaecke(empty, voll);
 
-		System.out.println("LKW tranportiert gerade" + saecke + " Säcke.");
+		System.out.println("LKW tranportiert gerade " + saecke + " Säcke.");
 
 		s.close();
 	}

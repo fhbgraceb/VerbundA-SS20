@@ -17,7 +17,7 @@ public class WuerfelMitDoWhile {
 		} while(zufallszahl != 6);
 
 
-		System.out.println("Sie haben benötigt " + versuche + " Versuche");
+		System.out.println("Sie haben benï¿½tigt " + versuche + " Versuche");
 
 	}
 
